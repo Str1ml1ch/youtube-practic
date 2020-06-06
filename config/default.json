@@ -1,0 +1,4 @@
+{
+    "port": 8000,
+    "mongoUri": "mongodb+srv://taras:240500@cluster0-h5nch.mongodb.net/test"
+}

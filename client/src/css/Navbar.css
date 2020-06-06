@@ -1,0 +1,116 @@
+.bottomNav
+{
+    color: rgb(153,150,129) !important;
+    font-size: 1rem;
+}
+
+a
+{
+    outline: none;
+    border: none;
+}
+
+.NavLinks
+{
+    color: rgba(255,255,255,.5) !important;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+.NavLinks:hover
+{
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+.NavLinks.active
+{
+    color: white !important;
+}
+.NavigationLogo
+{
+    color: red !important;
+    text-decoration: none;
+}
+.NavigationLogo:hover
+{
+    text-decoration: none;
+}
+body
+{
+    margin: 0 !important;
+    margin-bottom: 12vh !important;
+    background: rgba(0,0,0,0.5);
+    background: url(/back.png) no-repeat center center fixed;
+    background-image: linear-gradient(rgba(255,255,255,.8), rgba(0,0,0,.8)), url(/back.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    max-width: 100vw;
+}
+
+.VideoCard
+{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+    background: rgba(255,255,255,0.4);;
+    width: 30vw;
+    height: 30vh;
+    border-style: solid;
+}
+
+.VideoName
+{
+    width: 99%;
+    background: none;
+    height: 16%;
+    text-align: center;
+    align-items: center;
+}
+
+.TextName
+{
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.2rem;
+}
+
+.VideoImage
+{
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    height: 55%;
+}
+
+.dateText
+{
+    text-align: center;
+    height: 13%;
+}
+
+.hearth
+{
+    text-align: center;
+}
+
+
+.hearthclass
+{
+    transition: margin-right 2s;
+    cursor : pointer;
+    color: rgb(143,22,27);
+}
+
+.LikePage
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100vw;
+    justify-content: center;
+}
