@@ -53,21 +53,42 @@ body
 
 .VideoCard
 {
-    color: black;
-    display: flex;
-    flex-direction: column;
     margin-top: 1vh;
-    background: rgba(255,255,255,0.4);;
     width: 30vw;
     height: 30vh;
     border-style: solid;
 }
 
+.VideoCard:hover .VideoName
+{
+    transition: 1s;
+    background: black;
+}
+
+.VideoCard:hover .TextName
+{
+    transition: 1s;
+    color: white !important;
+}
+
+
+.VideoCard:hover .bot
+{
+    transition: 1s;
+    background: black;
+}
+
+.VideoCard:hover .TextName
+{
+    transition: 1s;
+    color: white !important;
+}
+
 .VideoName
 {
-    width: 99%;
-    background: none;
-    height: 16%;
+    width: 100%;
+    background: rgba(255,255,255,.8);
+    height: 20%;
     text-align: center;
     align-items: center;
 }
@@ -75,22 +96,15 @@ body
 .TextName
 {
     font-family: 'Inconsolata', monospace;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
-.VideoImage
-{
-    text-align: center;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    height: 55%;
-}
 
 .dateText
 {
     text-align: center;
-    height: 13%;
+    height: 10%;
 }
 
 .hearth
@@ -113,4 +127,16 @@ body
     flex-wrap: wrap;
     max-width: 100vw;
     justify-content: center;
+}
+
+
+
+.complex
+{
+    height: 60%;
+}
+
+.bot
+{
+    background: rgba(255,255,255,.8);
 }

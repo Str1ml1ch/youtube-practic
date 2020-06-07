@@ -1,37 +1,36 @@
 import React,{useState} from "react";
+import {NavLink} from 'react-router-dom'
 
-const time = new Date().getHours()+":"+ new Date().getMinutes()+":"+new Date().getSeconds()
+
 
 export const LikedVideosList=(props)=>
 {
-   const [liked,setLiked] = useState(true)
-    const toogle =() => {
+   const [liked,setLiked] = useState(null)
+   const [information,setinformation] = useState(props.setinfo)
+    const toogle =(e) => {
         setLiked(!liked)
-
+        console.log(information)
     }
-    
-
 
    return(
        <div>
-    <div className="VideoCard">
+    <div className="VideoCard" style={{background:`url(${props.image})`,backgroundPosition:"center center"}}>
         <div className="VideoName">
-            <a className="TextName">{props.name}</a>
+            <a className="TextName" style={{color:'black'}}>{props.name}</a>
         </div>
-        <div className="VideoImage">
-            <img
-                src={props.image || 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/480px-No_image_available.svg.png'}
-                height='80%'/>
-        </div>
-        
+        <a href={`https://www.youtube.com/watch?v=${props.link}`}>
+        <div className='complex'>
+            </div>
+            </a>
+            <div className='bot'>
         <div className='dateText'>
-            <a>{props.time || time}</a>
+            <a style={{color:'black'}} className='TextName'>{props.time}</a>
         </div>
         <div className="hearth">
             {!liked && (
-                <div>
+                <div >
                        
-                <svg className="bi bi-heart hearthclass" width="2em" height="2em" viewBox="0 0 16 16"
+                <svg className="bi bi-heart hearthclass" width="30px" height="30px" viewBox="0 0 16 16"
                      fill="currentColor" onClick={props.stay || toogle}
                      xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd"
@@ -41,7 +40,7 @@ export const LikedVideosList=(props)=>
             )}
             {liked && (
                 <div>
-                <svg className="bi bi-heart-fill hearthclass" width="2em" height="2em" viewBox="0 0 16 16"
+                <svg className="bi bi-heart-fill hearthclass" width="30px" height="30px" viewBox="0 0 16 16"
                      fill="currentColor" onClick={props.stay || toogle}
                      xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd"
@@ -49,6 +48,7 @@ export const LikedVideosList=(props)=>
                 </svg>
                 </div>
             )}
+        </div>
         </div>
     </div>
        </div>
