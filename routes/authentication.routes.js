@@ -54,7 +54,7 @@ router.post('/register',[
 
 router.post('/login',
 [
-    check('email','Введите корректный email').normalizeEmail().isEmail(),
+    check('email','Введите корректный email').isEmail(),
     check('password','Введите пароль').exists()
 ],
 async(req,res) =>
